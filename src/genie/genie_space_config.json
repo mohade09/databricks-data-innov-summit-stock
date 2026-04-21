@@ -1,7 +1,7 @@
 {
-  "space_id": "01f13d6420431269843def9fcbb0ff44",
+  "space_id": "01f13d64999d14d58c3470acaae97f7c",
   "display_name": "ShopEase Customer Support",
-  "warehouse_id": "2493f72e171308c0",
+  "warehouse_id": "44ee24c6c1a1d03f",
   "tables": [
     "debadm.ecom_gold.customer_orders",
     "debadm.ecom_gold.customer_returns",
