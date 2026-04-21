@@ -17,6 +17,8 @@ variables:
     default: "ecom_metrics"
   raw_data_schema:
     default: "ecom_raw_data"
+  warehouse_id:
+    default: "2493f72e171308c0"
 
 targets:
   dev:

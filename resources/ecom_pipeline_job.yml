@@ -1,0 +1,27 @@
+resources:
+  jobs:
+    ecom_pipeline_job:
+      name: "[${bundle.target}] ecom_chatbot_pipeline"
+      tasks:
+        - task_key: "bronze_ingestion"
+          pipeline_task:
+            pipeline_id: ${resources.pipelines.bronze_pipeline.id}
+            full_refresh: true
+
+        - task_key: "silver_transformations"
+          depends_on:
+            - task_key: "bronze_ingestion"
+          pipeline_task:
+            pipeline_id: ${resources.pipelines.silver_pipeline.id}
+            full_refresh: true
+
+        - task_key: "gold_views"
+          depends_on:
+            - task_key: "silver_transformations"
+          pipeline_task:
+            pipeline_id: ${resources.pipelines.gold_pipeline.id}
+            full_refresh: true
+
+      permissions:
+        - level: CAN_VIEW
+          group_name: "users"
