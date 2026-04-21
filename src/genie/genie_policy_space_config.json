@@ -1,0 +1,25 @@
+{
+  "space_id": "01f13d655d891aeda72c218a6dfa5570",
+  "display_name": "Return Policy Analytics",
+  "warehouse_id": "2493f72e171308c0",
+  "tables": [
+    "debadm.ecom_gold.abuse_signals",
+    "debadm.ecom_gold.customer_returns",
+    "debadm.ecom_gold.return_analysis",
+    "debadm.ecom_gold.return_eligibility"
+  ],
+  "sample_questions": [
+    "What is the return rate by product category this quarter?",
+    "Which categories have the highest refund cost?",
+    "Show me the monthly trend of defective returns",
+    "What percentage of returns are due to changed mind vs defective?",
+    "Which brands have the highest return rate?",
+    "How many high-risk abuse customers do we have?",
+    "What is the average processing time for returns by category?",
+    "Show me the rejection rate trend over the last 6 months",
+    "Which product categories should we tighten the return window for?",
+    "Compare return reasons across Electronics vs Clothing",
+    "Top 10 customers by total refund value received",
+    "What is our overall defective rate and how does it compare by brand?"
+  ]
+}
