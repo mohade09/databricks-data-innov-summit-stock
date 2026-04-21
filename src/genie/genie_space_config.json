@@ -1,14 +1,13 @@
 {
-  "space_id": "01f13d636ee61ae38301c361f7db3605",
+  "space_id": "01f13d6420431269843def9fcbb0ff44",
   "display_name": "ShopEase Customer Support",
   "warehouse_id": "2493f72e171308c0",
-  "workspace": "fe-vm-vdm-serverless-iwnbow.cloud.databricks.com",
   "tables": [
     "debadm.ecom_gold.customer_orders",
     "debadm.ecom_gold.customer_returns",
-    "debadm.ecom_gold.return_eligibility",
     "debadm.ecom_gold.invoice_details",
-    "debadm.ecom_gold.refund_status"
+    "debadm.ecom_gold.refund_status",
+    "debadm.ecom_gold.return_eligibility"
   ],
   "sample_questions": [
     "Show me my recent orders",
