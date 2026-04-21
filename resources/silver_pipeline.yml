@@ -1,0 +1,17 @@
+resources:
+  pipelines:
+    silver_pipeline:
+      name: "[${bundle.target}] ecom_chatbot_silver"
+      catalog: ${var.catalog}
+      target: ${var.silver_schema}
+      libraries:
+        - file:
+            path: ../src/pipelines/silver/silver_transformations.sql
+      serverless: true
+      continuous: false
+      development: true
+      photon: true
+      channel: current
+      permissions:
+        - level: CAN_VIEW
+          group_name: "users"
