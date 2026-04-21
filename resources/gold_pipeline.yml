@@ -1,0 +1,17 @@
+resources:
+  pipelines:
+    gold_pipeline:
+      name: "[${bundle.target}] ecom_chatbot_gold"
+      catalog: ${var.catalog}
+      target: ${var.gold_schema}
+      libraries:
+        - file:
+            path: ../src/pipelines/gold/gold_views.sql
+      serverless: true
+      continuous: false
+      development: true
+      photon: true
+      channel: current
+      permissions:
+        - level: CAN_VIEW
+          group_name: "users"
