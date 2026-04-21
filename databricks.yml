@@ -1,0 +1,29 @@
+bundle:
+  name: ecom-chatbot
+
+include:
+  - resources/*.yml
+
+variables:
+  catalog:
+    default: "debadm"
+  bronze_schema:
+    default: "ecom_bronze"
+  silver_schema:
+    default: "ecom_silver"
+  gold_schema:
+    default: "ecom_gold"
+  metrics_schema:
+    default: "ecom_metrics"
+  raw_data_schema:
+    default: "ecom_raw_data"
+
+targets:
+  dev:
+    default: true
+    mode: development
+    workspace:
+      host: https://fe-vm-vdm-serverless-iwnbow.cloud.databricks.com
+      profile: fe-vm-vdm-serverless-iwnbow
+    variables:
+      catalog: "debadm"
